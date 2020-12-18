@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+
+    p{
+        font-size: 30em;
+    }
+}
+
+body{
+    position: relative;
+
+    .section{
+        position: absolute;
+    }
+}

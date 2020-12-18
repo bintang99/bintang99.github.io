@@ -1,0 +1,5729 @@
+/*
+Theme Name: Compro
+Theme URI: http://compro.ciuss.com
+Author URI: http://facebook.com/ciussgw
+Description: Tema Company Profile, dengan 4 pilihan header, 4 pilihan slide, background parallax, custom warna, on off fitur homepage, replace text, dll
+Author: yayun
+Version: 2.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: wordpress company, wp company, wordpress compro
+Copyright: (c) 2017 ciuss.com
+*/
+
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800";
+@import "https://fonts.googleapis.com/css?family=Philosopher";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800";
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,700,800";
+@import "https://fonts.googleapis.com/css?family=PT+Sans:300,400,700,800";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+body {
+    line-height: 1;
+    text-align: left;
+    font: 300 12px/1.3 Montserrat, 'Open Sans', Arial, sans-serif;
+    color: #777;
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+
+ins {
+    text-decoration: none
+}
+
+del {
+    text-decoration: line-through
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+a {
+    text-decoration: none;
+    color: #186e90
+}
+
+section {
+    padding: 40px 0 40px;
+    background: #fdfdfd;
+}
+
+.parallax {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.toppar {
+   position: relative;
+   padding: 0;
+   margin: 0;
+   overflow: hidden;
+}
+
+pre {
+    overflow: auto;
+}
+
+pre code {
+    word-wrap: normal;
+    white-space: pre;
+}
+
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.notime {
+    opacity: 0;
+    display: none ! important
+}
+
+
+/* BOXED */
+
+.wrapper.boxed {
+    max-width: 1170px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.boxed #heads-cenlo,
+.boxed #heads-one,
+.boxed #heads-thre,
+.boxed #heads-pat {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.relv {
+    position: relative;
+}
+
+.ci-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+.boxed .ci-container {
+    margin: 0 15px;
+    width: auto;
+}
+
+.boxed .overbot .ci-container {
+    margin: 0;
+}
+
+.fullcontent .ci-container {
+    max-width: 100%;
+    margin: 0 10px;
+}
+
+.combread {
+    background: #f7f7f7;
+    position: relative;
+}
+
+.blog .combread {
+    height: 200px;
+}
+
+.home.blog .combread {
+    height: 0;
+}
+
+.combread img {
+    display: block;
+    width: 100%;
+}
+
+.breadcontainer {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+}
+
+.breadter {
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+
+.dimox {
+    padding: 0;
+    position: relative;
+}
+
+.breadcrumbs {
+    float: left;
+    font: 400 12px/40px Montserrat;
+    height: 40px;
+    margin: 0 50px;
+}
+
+.breadcrumbs .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+.breadlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.comshare {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.comshare .fa {
+    width: 25px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* HEADS ONE STYLE*/
+
+.admin-bar #heads-one {
+    top: 32px;
+}
+
+#heads-one {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+
+#heads-one .rg-after {
+    height: 80px;
+    width: 1000px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.boxed #heads-one .rg-after {
+    width: 15px;
+}
+
+#heads-one .cotophead {
+    font: 11px 'Open Sans';
+    padding: 5px 0;
+    line-height: 25px;
+}
+
+#heads-one .cotophead .fa-phone {
+    margin: 0 5px 0 0;
+}
+
+#heads-one .cotophead .fa-envelope {
+    margin: 0 5px 0 20px;
+}
+
+#heads-one .cotophead .topsos {
+    float: right;
+    font-size: 14px;
+}
+
+#heads-one .cotophead .topsos .fa {
+    margin: 0 0 0 2px;
+    line-height: 25px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    float: left;
+    border-radius: 3px;
+}
+
+#heads-one .cotophead .topsos .fa.fa-search {
+    margin: 5px 0 5px 10px;
+    line-height: 15px;
+    padding: 0 0 0 15px;
+}
+
+#heads-one .comsearch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 80px;
+    line-height: 80px;
+    width: 40px;
+    text-align: right;
+    z-index: 40;
+}
+
+#heads-one .comsearch .fa {
+    cursor: pointer;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    width: 22px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#heads-one .inn ul {
+    height: 80px;
+    position: relative;
+    font-family: 'Open Sans Condensed';
+    text-transform: uppercase;
+    margin: 0 0 0 30px;
+}
+
+#heads-one .inn ul:before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 60px solid transparent;
+    clear: both
+}
+
+#heads-one .inn {
+    float: right;
+    width: auto;
+    position: relative;
+}
+
+#heads-one .inn ul {
+    width: auto;
+    float: right;
+    margin-right: 40px;
+}
+
+#heads-one .inn ul li {
+    display: inline;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin: 15px 20px 0;
+    padding: 0;
+    position: relative;
+}
+
+#heads-one .inn ul li a {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    line-height: 50px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#heads-one .inn ul li ul {
+    display: block ! important;
+    opacity: 0;
+    transition: all .3s ease-out .1s;
+    position: absolute;
+    transform: rotateX(90deg);
+    top: 100px;
+    margin: 0;
+    left: 0;
+    width: auto;
+    background: none;
+    height: auto;
+    z-index: -1;
+    padding: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+#heads-one .inn ul li ul:before {
+    display: none;
+}
+
+#heads-one .inn ul li ul li {
+    margin: 0;
+    padding: 0 15px;
+    line-height: 36px;
+    height: 36px;
+    float: none;
+    position: relative;
+    display: block;
+    border: none ! important;
+    font-size: 13px;
+    text-align: left;
+}
+
+#heads-one .inn ul li ul li:hover {
+    border: 0 ! important;
+}
+
+#heads-one .inn ul li ul li a {
+    display: block;
+    white-space: nowrap;
+    margin: 0 !important;
+    white-space: nowrap;
+    padding-top: 0;
+    line-height: 36px;
+}
+
+#heads-one .inn ul li a:hover {
+    text-decoration: none;
+}
+
+#heads-one .inn ul li:hover ul {
+    display: block ! important;
+    transition: all .3s ease-out .1s;
+    top: 50px;
+    opacity: 1;
+    z-index: 100;
+    transform: rotateX(0deg);
+}
+
+#heads-one .inn ul li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    top: -2px;
+}
+
+#heads-one .inn ul li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 300px;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-one .inn ul li ul li.menu-item-has-children:after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    clear: both
+}
+
+#heads-one .inn ul li ul li.menu-item-has-children:hover:after {
+}
+
+#heads-one .inn ul li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-one .inn ul li ul li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    left: 300px;
+    top: -2px;
+}
+
+#heads-one .inn ul li ul li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 130%;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-one .inn ul li ul li ul li:hover ul {
+    display: block ! important;
+}
+
+#heads-one .inn ul li ul li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-one .inn ul li ul li ul li:hover ul li ul {
+    display: none ! important;
+}
+
+#heads-one .inn ul li ul li ul li ul li:hover ul {
+    display: block ! important;
+    top: -2px;
+}
+
+#heads-one .logo {
+    float: left;
+    width: auto;
+}
+
+#heads-one .one-logo {
+    padding: 10px 0;
+}
+
+#heads-one .one-logo img {
+    height: 60px;
+    display: block;
+}
+
+
+/* HEADS CENLO STYLE*/
+
+.admin-bar #heads-cenlo {
+    top: 32px;
+}
+
+#heads-cenlo {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    font-family: 'PT Sans';
+}
+
+#heads-cenlo .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    margin: 0 0 0 -125px;
+    width: 250px;
+    text-align: center;
+    padding: 0;
+    height: 80px;
+}
+
+#heads-cenlo .cl-logo {
+    position: relative;
+    width: 250px;
+    height: 60px;
+    padding: 20px 0;
+    z-index: 100;
+}
+
+#heads-cenlo .cl-logo:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 20px solid transparent;
+    clear: both
+}
+
+#heads-cenlo .cl-logo:after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    clear: both
+}
+
+#heads-cenlo .cl-logo img {
+    max-width: 250px;
+    height: auto;
+    max-height: 60px;
+}
+
+#heads-cenlo .cotophead {
+    font: 11px 'Open Sans';
+    padding: 0;
+    line-height: 35px;
+}
+
+#heads-cenlo .censpan {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+}
+
+#heads-cenlo .cotophead .fa-phone {
+    margin: 0 5px 0 0;
+}
+
+#heads-cenlo .cotophead .fa-envelope {
+    margin: 0 5px 0 20px;
+}
+
+#heads-cenlo .cotophead .topsos {
+    float: right;
+    font-size: 18px;
+}
+
+#heads-cenlo .cotophead .topsos .fa {
+    margin: 0 5px 0 0;
+}
+
+#heads-cenlo .cotophead .topsos .fa.fa-search {
+    margin: 5px 0 5px 10px;
+    line-height: 15px;
+    padding: 0 0 0 15px;
+}
+
+#heads-cenlo .cotophead .topsos .fa.fa-chevron-up {
+    margin: 5px 0 5px 10px;
+    line-height: 15px;
+    padding: 0 0 0 15px;
+    display: none;
+}
+
+#heads-pat .patlo .fa-chevron-down {
+    display: none;
+}
+
+#heads-cenlo .comsearch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 80px;
+    line-height: 80px;
+    width: 40px;
+    text-align: right;
+    z-index: 100;
+}
+
+#heads-cenlo .comsearch .fa {
+    cursor: pointer;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    width: 22px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#heads-cenlo .mheader-two {
+    height: 80px;
+}
+
+#heads-cenlo .clmenu {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    margin: 0 0 0 160px;
+    height: 80px;
+    width: auto;
+    text-align: right;
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+#heads-cenlo .crmenu {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    z-index: 100;
+    margin: 0 160px 0 0;
+    height: 80px;
+    width: auto;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+#heads-cenlo .mheader-two li {
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin: 0 15px;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#heads-cenlo .mheader-two li:hover ul {
+    display: block ! important;
+    transition: all .3s ease-out .1s;
+    top: 80px;
+    opacity: 1;
+    z-index: 100;
+    transform: rotateX(0deg);
+}
+
+#heads-cenlo .mheader-two li ul {
+    background: #036 !important;
+    display: block ! important;
+    opacity: 0;
+    transition: all .3s ease-out .1s;
+    position: absolute;
+    transform: rotateX(90deg);
+    top: 80px;
+    margin: 0;
+    left: 0;
+    width: auto;
+    background: none;
+    height: auto;
+    z-index: -1;
+    padding: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+#heads-cenlo .mheader-two li ul:before {
+    display: none;
+}
+
+#heads-cenlo .mheader-two li ul li {
+    margin: 0;
+    padding: 0 15px;
+    line-height: 42px;
+    height: 42px;
+    float: none;
+    position: relative;
+    display: block;
+    border: none ! important;
+    text-align: left;
+}
+
+#heads-cenlo .mheader-two li ul li:hover {
+    border: 0 ! important;
+}
+
+#heads-cenlo .mheader-two li ul li a {
+    display: block;
+    white-space: nowrap;
+    margin: 0 !important;
+    white-space: nowrap;
+    padding-top: 0;
+    line-height: 40px;
+}
+
+#heads-cenlo .mheader-two li a:hover {
+    text-decoration: none;
+}
+
+#heads-cenlo .mheader-two li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    top: -2px;
+}
+
+#heads-cenlo .mheader-two li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 300px;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-cenlo .mheader-two li ul li.menu-item-has-children:after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    clear: both
+}
+
+#heads-cenlo .mheader-two li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-cenlo .mheader-two li ul li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    left: 130%;
+    top: -2px;
+}
+
+#heads-cenlo .mheader-two li ul li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 300px;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-cenlo .mheader-two li ul li ul li:hover ul {
+    display: block ! important;
+}
+
+#heads-cenlo .mheader-two li ul li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: -2px;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-cenlo .mheader-two li ul li ul li:hover ul li ul {
+    display: none ! important;
+}
+
+#heads-cenlo .mheader-two li ul li ul li ul li:hover ul {
+    display: block ! important;
+    top: -2px;
+}
+
+/* HEADS THRE */
+
+.admin-bar #heads-thre {
+    top: 32px;
+}
+
+#heads-thre {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+
+#heads-thre .topheader {
+    padding: 0;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font: 12px 'Open Sans';
+}
+
+#heads-thre .topheader .contcom {
+    margin-left: 35px;
+}
+
+#heads-thre .cotophead {
+    font: 11px 'Open Sans';
+    padding: 0;
+    margin: 0;
+    line-height: 35px;
+}
+
+#heads-thre .cotophead .mail {
+    margin: 0 10px 0 20px;
+}
+
+#heads-thre .cotophead .fa-phone {
+    margin: 0 5px 0 0;
+}
+
+#heads-thre .cotophead .fa-envelope {
+    margin: 0 5px 0 10px;
+}
+
+#heads-thre .cotophead .topsos {
+    float: right;
+    font-size: 16px;
+}
+
+#heads-thre .cotophead .topsos .fa {
+    margin: 0 5px 0 0;
+}
+
+#heads-thre .inn .fa-search {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    text-align: right;
+    font-size: 30px;
+    line-height: 40px;
+    height: 40px;
+    width: 50px;
+}
+
+#heads-thre .inn .fa-navicon {
+    display: none;
+}
+
+#heads-thre .inn .fa-chevron-down {
+    display: none;
+}
+
+#heads-thre .logo {
+    width: 25%;
+    float: left;
+    height: 115px;
+    margin: 0 0 -15px;
+    position: relative;
+}
+
+#heads-thre .logo:after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 15px solid transparent;
+    clear: both
+}
+
+#heads-thre .thre-logo {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#heads-thre .thre-logo img {
+    max-height: 100px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+#heads-thre .inn {
+    width: 75%;
+    float: right;
+    position: relative;
+}
+
+#heads-thre .inn ul {
+    height: 65px;
+    position: relative;
+    font-family: 'PT Sans';
+    margin: 0 80px 0 20px;
+}
+
+#heads-thre .inn ul li {
+    display: inline;
+    float: left;
+    position: relative;
+    height: 65px;
+    line-height: 65px;
+    padding: 0;
+    margin: 0 15px;
+}
+
+#heads-thre .inn ul li a {
+    font: bold 14px 'Open Sans';
+    text-transform: uppercase;
+}
+
+#heads-thre .inn ul li a:hover {
+    text-decoration: none;
+}
+
+#heads-thre .inn ul li.menu-item-has-children:after {
+    content: '';
+    position: absolute;
+    right: -17px;
+    top: 28px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    clear: both
+}
+
+#heads-thre .inn ul li ul {
+    display: block ! important;
+    opacity: 0;
+    transition: all .3s ease-out .1s;
+    position: absolute;
+    top: 165px;
+    transform: rotateX(90deg);
+    margin: 0;
+    left: -8px;
+    width: auto;
+    background: none;
+    height: auto;
+    z-index: -1;
+    padding: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+#heads-thre .inn ul li ul:before {
+    display: none;
+}
+
+#heads-thre .inn ul li ul li {
+    margin: 0;
+    padding: 0 10px;
+    line-height: 40px;
+    height: 40px;
+    float: none;
+    position: relative;
+    display: block;
+    text-align: left;
+}
+
+#heads-thre .inn ul li ul li:last-child {
+    border: 0 ! important;
+}
+
+#heads-thre .inn ul li ul li a {
+    display: block;
+    white-space: nowrap;
+    margin: 0 !important;
+    white-space: nowrap;
+    padding-top: 0;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+#heads-thre .inn ul li:hover ul {
+    display: block ! important;
+    transition: all .3s ease-out .1s;
+    top: 65px;
+    opacity: 1;
+    z-index: 100;
+    transform: rotateX(0deg);
+}
+
+#heads-thre .inn ul li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    top: -2px;
+}
+
+#heads-thre .inn ul li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 130%;
+    top: 0;
+    border: 0;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-thre.heads-thre .inn ul li ul li ul {
+    border-top: 0;
+}
+
+#heads-thre .inn ul li ul li.menu-item-has-children:after {
+    content: '';
+    position: absolute;
+    right: 12px ! important;
+    left: auto;
+    top: 17px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    clear: both
+}
+
+#heads-thre .inn ul lu ul li.menu-item-has-children:hover:after {
+    display: none;
+}
+
+#heads-thre .inn ul li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: 0;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-thre .inn ul li ul li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    left: 130%;
+    top: 0;
+}
+
+#heads-thre .inn ul li ul li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 300px;
+    top: 0;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-thre.heads-thre .inn ul li ul li ul li ul {
+    border-top: 0;
+}
+
+#heads-thre .inn ul li ul li ul li:hover ul {
+    display: block ! important;
+}
+
+#heads-thre .inn ul li ul li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: 0;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-thre .inn ul li ul li ul li:hover ul li ul {
+    display: none ! important;
+}
+
+#heads-thre .inn ul li ul li ul li ul li:hover ul {
+    display: block ! important;
+    top: 0;
+}
+
+/* HEADS PAT */
+
+.admin-bar #heads-pat {
+    top: 32px;
+}
+
+#heads-pat {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    z-index: 200;
+}
+
+#heads-pat .htop {
+    width: 100%;
+    height: 80px;
+}
+
+#heads-pat .htop.h4hide {
+    display: none;
+}
+
+#heads-pat .logopat {
+    width: 35%;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+#heads-pat .patlo {
+    padding: 10px 0;
+}
+
+#heads-pat .patlo img {
+    display: block;
+    height: 60px;
+}
+
+#heads-pat .patr {
+    width: 65%;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+#heads-pat .rcon {
+    padding: 15px 0;
+}
+
+#heads-pat .cocall {
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+
+#heads-pat .ccinn {
+    padding: 0 20px 0 0;
+}
+
+#heads-pat .hot {
+    font: 300 12px 'Montserrat';
+}
+
+#heads-pat .call {
+    font: 700 25px/1.5 'Open Sans', 'Open Sans';
+}
+
+#heads-pat .otcon {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+#heads-pat .listcon {
+    padding: 0 0 0 20px;
+    font: 300 12px/1.5 'Montserrat';
+}
+
+#heads-pat .listcon span {
+    display: block
+}
+
+#heads-pat .listcon .fa {
+    width: 20px;
+}
+
+#heads-pat .hbotnav {
+    width: 100%;
+    height: 50px;
+}
+
+#heads-pat .hbotnav .patnav {
+    margin-right: 240px;
+}
+
+#heads-pat .overbot {
+    position: relative;
+}
+
+#heads-pat .overbot .rightnav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+
+#heads-pat .overbot .rightnav .fa {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+#heads-pat .overbot .rightnav .fa-navicon {
+    display: none;
+}
+
+#heads-pat .overbot .rightnav .fa-search {
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    margin: 0 0 0 5px;
+}
+
+#heads-pat .pnav li {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    float: left;
+    position: relative;
+}
+
+#heads-pat .pnav li a {
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    font: bold 16px/50px 'Open Sans Condensed', 'PT Sans', sans-serif;
+}
+
+#heads-pat .pnav li ul {
+    display: block ! important;
+    opacity: 0;
+    transition: all .3s ease-out .1s;
+    position: absolute;
+    top: 50px;
+    transform: rotateX(90deg);
+    margin: 0;
+    left: 0;
+    width: auto;
+    background: none;
+    height: auto;
+    z-index: -1;
+    padding: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+#heads-pat .pnav li ul:before {
+    display: none;
+}
+
+#heads-pat .pnav li ul li,
+#heads-pat .pnav li ul li:first-child {
+    margin: 0;
+    padding: 0 10px;
+    line-height: 36px;
+    height: 36px;
+    float: none;
+    position: relative;
+    display: block;
+    text-align: left;
+    border: 0;
+}
+
+#heads-pat .pnav li ul li:last-child {
+    border: 0 ! important;
+}
+
+#heads-pat .pnav li ul li a {
+    display: block;
+    white-space: nowrap;
+    margin: 0 !important;
+    white-space: nowrap;
+    padding-top: 0;
+    line-height: 36px;
+    font-size: 15px;
+}
+
+#heads-pat .pnav li:hover ul {
+    display: block ! important;
+    transition: all .3s ease-out .1s;
+    top: 50px;
+    opacity: 1;
+    z-index: 100;
+    transform: rotateX(0deg);
+}
+
+#heads-pat .pnav li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    top: -2px;
+}
+
+#heads-pat .pnav li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 300px;
+    top: 0;
+    border: 0;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-pat .pnav li ul li.menu-item-has-children:after {
+    content: '';
+    position: absolute;
+    right: 12px ! important;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    clear: both
+}
+
+#heads-pat .pnav li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: 0;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-pat .pnav li ul li:hover ul li ul {
+    display: block ! important;
+    opacity: 0;
+    left: 130%;
+    top: 0;
+}
+
+#heads-pat .pnav li ul li ul li ul {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    left: 130%;
+    top: 0;
+    transition: all .3s ease-out .1s;
+    transform: rotateX(0deg);
+}
+
+#heads-pat .pnav li ul li ul li:hover ul {
+    display: block ! important;
+    opacity: 1;
+    left: 100%;
+    top: 0;
+    transition: all .3s ease-out .1s;
+}
+
+#heads-pat .pnav li ul li ul li:hover ul li ul {
+    display: none ! important;
+}
+
+#heads-pat .pnav li ul li ul li ul li:hover ul {
+    display: block ! important;
+    top: 0;
+}
+
+#heads-cenlo .prosearch {
+    right: -15px;
+    top: 44px;
+}
+
+.boxed #heads-cenlo .prosearch {
+    right: -5px;
+}
+
+#heads-one .prosearch {
+    right: -11px;
+    bottom: -40px;
+}
+
+#heads-thre .prosearch {
+    right: -11px;
+    bottom: -40px;
+}
+
+#heads-pat .prosearch {
+    right: 0;
+    bottom: -40px;
+}
+
+#heads-pat .prosearch fieldset:after {
+    display: none;
+}
+
+.prosearch {
+    position: absolute;
+    z-index: 200;
+    width: 200px;
+    height: 30px;
+}
+
+.prosearch fieldset {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    width: auto;
+    position: relative;
+}
+
+.prosearch fieldset:after {
+    content: '';
+    position: absolute;
+    right: 8px ! important;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    clear: both
+}
+
+.prosearch input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    height: 28px;
+    font: 300 12px/26px Montserrat;
+}
+
+.prosearch button {
+    display: none;
+}
+
+.just-bg {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.slider-n1 {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.slider-n1 .scenter {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.slider-n1 .heading {
+    font: 700 60px/1.0 Montserrat, 'PT Sans', san-serif;
+    margin: 0 0 10px;
+}
+
+.slider-n1 .desc {
+    font: 300 20px/1.2 'PT Sans', san-serif;
+    margin: 0 0 30px;
+}
+
+.slider-n1 .inline {
+    display: inline-block;
+}
+
+.slider-n1 .inleftbut {
+    border-radius: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    margin: 4px 8px 0 5px;
+    color: #035;
+    font: bold 13px/40px 'Open Sans';
+    letter-spacing: 4px;
+}
+
+.slider-n1 .inrightbut {
+    border-radius: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    margin: 4px 8px 0 0;
+    font: bold 13px/40px 'Open Sans';
+    letter-spacing: 4px;
+}
+
+.slider-n2 {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.slider-n2 .relv {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-n2 .n2outer {
+    width: auto;
+    max-width: 45%;
+    float: right;
+    margin-right: 60px;
+}
+
+.slider-n2 .arrow-style {
+    padding: 20px 20px 30px;
+    position: relative;
+}
+
+.slider-n2 .heading {
+    font: 700 55px/1.0 Montserrat, 'PT Sans', san-serif;
+    margin: 0 0 10px;
+}
+
+.slider-n2 .desc {
+    font: 300 20px/1.2 'PT Sans', san-serif;
+    margin: 0 0 30px;
+}
+
+.slider-n2 .inline {
+    display: inline-block;
+}
+
+.slider-n2 .inleftbut {
+    border-radius: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    margin: 4px 8px 0 5px;
+    font: bold 13px/40px 'Open Sans';
+    letter-spacing: 4px;
+}
+
+.slider-n2 .inrightbut {
+    border-radius: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    margin: 4px 8px 0 0;
+    font: bold 13px/40px 'Open Sans';
+    letter-spacing: 4px;
+}
+
+.slider-n3 {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.slider-n3 .out3r {
+    width: 45%;
+    float: left;
+}
+
+.slider-n3 .heading {
+    font: 700 60px/1.0 Montserrat, 'PT Sans', san-serif;
+    margin: 0 0 10px;
+}
+
+.slider-n3 .desc {
+    font: 300 20px/1.2 'PT Sans', san-serif;
+    margin: 0 0 30px;
+}
+
+.slider-n3 .inline {
+    display: inline-block;
+}
+
+.slider-n3 .inleftbut {
+    border-radius: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    margin: 4px 8px 0 5px;
+    font: bold 13px/40px 'Open Sans';
+    letter-spacing: 4px;
+}
+
+.slider-n3 .inrightbut {
+    border-radius: 40px;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    margin: 4px 8px 0 0;
+    font: bold 13px/40px 'Open Sans';
+    letter-spacing: 4px;
+}
+
+.slider-n4 {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.slider-n4 .under3 {
+    width: 35%;
+    padding: 20px 30px;
+}
+
+.slider-n4 .heading {
+    font: 400 30px/1.2 'Montserrat', san-serif;
+    margin: 0 0 10px;
+}
+
+.slider-n4 .desc {
+    font: 300 15px/1.2 'Montserrat', san-serif;
+    margin: 0 0 30px;
+}
+
+.slider-n4 .inline {
+    display: inline-block;
+}
+
+.slider-n4 .inleftbut {
+    display: inline-block;
+    border-radius: 4px;
+    height: 30px;
+    padding: 0 24px;
+    margin: 4px 8px 0 5px;
+    font: bold 13px/30px 'Open Sans';
+    letter-spacing: 1px;
+}
+
+.slider-n4 .inrightbut {
+    display: inline-block;
+    border-radius: 4px;
+    height: 30px;
+    padding: 0 24px;
+    margin: 4px 8px 0 0;
+    font: bold 13px/30px 'Open Sans';
+    letter-spacing: 1px;
+}
+
+.bot1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 120px;
+}
+
+.sllarrow {
+    position: relative;
+    width: 100%;
+}
+
+.sllarrow:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: -120px;
+    width: 0;
+    height: 0;
+    border-right: 800px solid transparent;
+    border-left: 0px solid transparent;
+    clear: both
+}
+
+.sllarrow:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -120px;
+    width: 0;
+    height: 0;
+    border-left: 800px solid transparent;
+    border-right: 0px solid transparent;
+    clear: both
+}
+
+.bot2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 40px;
+    z-index: 10;
+}
+
+.bot3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 40px;
+    z-index: 10;
+}
+
+.arrow-style:before {
+    content: '';
+    position: absolute;
+    right: -60px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 60px solid transparent;
+    border-left: 0px solid transparent;
+    clear: both
+}
+
+.arrow-style:after {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 0px solid transparent;
+    clear: both
+}
+
+.slaksen {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.slaksen:after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-right: 40px solid transparent;
+    clear: both
+}
+
+.slaksen:before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    clear: both
+}
+
+#ndeslide {
+    padding: 0;
+    height: auto;
+    background: #222;
+}
+
+.slidecomp {
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+#slidecomp {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.slide,
+.slidess {
+    height: auto;
+    width: 100%;
+}
+
+.slide img,
+.slidess img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block
+}
+
+.comtop {
+    margin: 0;
+    padding: 40px 0;
+}
+
+.com-head {
+    text-align: center;
+    font: 700 45px 'Montserrat' ! important;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.com-desc {
+    text-align: center;
+    font: 300 14px/1.4 'Montserrat';
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.loop-service {
+    width: 100%;
+    float: none;
+    height: auto;
+    display: inline-block;
+    padding: 40px 0;
+}
+
+.servbox {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.servicon {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    margin: 0 auto;
+}
+
+.boxinn {
+    padding: 15px;
+    margin: 10px;
+}
+
+.boxinn h1 {
+    text-align: center;
+    font: bold 25px 'Montserrat';
+    margin: 40px 0 20px 0;
+}
+
+.boxtext {
+    text-align: center;
+    font: 300 13px 'Montserrat';
+}
+
+.servicon .fa {
+    font-size: 80px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 100px;
+}
+
+.servicon:after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: -15px;
+    margin: 0 -15px 0 0;
+    width: 0;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    clear: both
+}
+
+.rotabox {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.rotacon {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    margin: 0 auto;
+    border-radius: 20px;
+    transform: rotate(45deg);
+}
+
+.rotainn {
+    padding: 15px;
+    margin: 10px;
+}
+
+.rotainn h1 {
+    text-align: center;
+    font: bold 25px 'Montserrat';
+    margin: 40px 0 20px 0;
+}
+
+.rotacon .fa {
+    font-size: 80px;
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    transform: rotate(-45deg);
+}
+
+.rotatext {
+    text-align: center;
+    font: 300 13px 'Montserrat';
+}
+
+.servhalf {
+    width: 50%;
+    float: left;
+    min-height: 220px;
+}
+
+.halfinn {
+    margin: 15px;
+    padding: 0 0 15px;
+    overflow: hidden;
+}
+
+.lefticon {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    float: left;
+    margin: 0 30px 0 0;
+    position: relative;
+    z-index: 10;
+}
+
+.lefticon .fa {
+    font-size: 80px;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    line-height: 130px;
+    border-radius: 20px;
+}
+
+.iconborder {
+    position: absolute;
+    bottom: -90px;
+    right: -90px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+}
+
+.halfright {
+    margin-left: 180px;
+}
+
+.servhalf h1 {
+    text-align: left;
+    font: bold 25px 'Montserrat';
+    margin: 0 0 15px 180px;
+    padding: 10px 0 15px 0;
+    position: relative;
+}
+
+.servhalf h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 -15px 0 0;
+    width: 70px;
+    height: 4px;
+    clear: both
+}
+
+.servtext {
+    text-align: left;
+    font: 300 13px/1.4 'Montserrat';
+    position: relative;
+    z-index: 20;
+}
+
+
+/* OUR WORKS */
+
+.comworks h1 {
+    position: relative;
+    font: bold 45px/1.1 Montserrat;
+    padding: 20px 0 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.comworks h1:after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    margin: 0 -35px 0 0;
+    width: 70px;
+    height: 3px;
+    clear: both;
+    transition: all .5s ease .5s;
+}
+
+.comworks .workdesc {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto 30px;
+    font: 300 13px/1.5 Montserrat;
+}
+
+.inn-works {
+    display: inline-block;
+    width: 100%;
+}
+
+.workpart {
+    width: 33.333%;
+    float: left;
+    position: relative;
+}
+
+.twon {
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.twon img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.twon .wo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .5s ease .1s;
+    transform: scale(0);
+}
+
+.twon:hover .wo {
+    transition: all .5s ease .1s;
+    transform: scale(1);
+}
+
+.tivtwo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .5s ease .1s;
+    text-align: center;
+    margin: -25px 0 0 0;
+}
+
+.tivtwo .tbutton {
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+    display: inline-block;
+    font: bold 16px/40px 'Open Sans Condensed';
+    opacity: 0;
+    transform: scale(4) rotateY(90deg);
+    transition: all .5s ease .1s;
+}
+
+.twon:hover .tivtwo .tbutton {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+    transition: all .5s ease .5s;
+}
+
+.tivtwo .tbutton a {
+    transition: all .5s ease .1s;
+}
+
+.tren {
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tren img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tren .wo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    z-index: 10;
+    transition: all .5s ease .5s;
+}
+
+.tren:hover .wo {
+    transition: all .5s ease .1s;
+    right: 0;
+}
+
+.tivtren {
+    position: absolute;
+    top: 30px;
+	right: 100%;
+	left: 0;
+    width: auto;
+    z-index: 10;
+    transition: all .5s ease .3s;
+    padding: 15px 30px 20px;
+    margin: 25px 0 0 -100%;
+}
+
+.tivtren h3 {
+    font: bold 16px/1.2 'Open Sans Condensed';
+    padding: 0 0 20px;
+}
+
+.tivtren h3:before {
+    content: '';
+    position: absolute;
+    left: 2000%;
+    top: 0;
+    margin: 0;
+    width: 70px;
+    height: 3px;
+    clear: both;
+    transition: all .5s ease-out .1s;
+}
+
+.tren:hover .tivtren {
+    transition: all .5s ease .3s;
+    margin-left: 0;
+	right: 10px;
+}
+
+.tren:hover .tivtren h3:before {
+    left: 30px;
+    transition: all .5s ease-out .5s;
+}
+
+.tivtren .tbutton {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    margin-left: -300px;
+    display: inline-block;
+    font: bold 16px/30px 'Open Sans Condensed';
+    transition: all .5s ease .1s;
+}
+
+.tren:hover .tivtren .tbutton {
+    transition: all .5s ease .5s;
+    margin-left: 0;
+}
+
+.tivtren .tbutton a {
+    transition: all .5s ease .1s;
+}
+
+.tfore {
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tfore img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tfore .wo {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .5s ease .8s;
+}
+
+.tfore:hover .wo {
+    transition: all .5s ease .1s;
+    top: 0;
+}
+
+.tivtfore {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    width: auto;
+    text-align: center;
+    z-index: 10;
+    transition: all .5s ease .5s;
+    padding: 150px 0 15px;
+    margin: 100% 0 0 0;
+}
+
+.tivtfore h3 {
+    font: bold 16px/1.2 'Open Sans Condensed';
+    margin: 0 0 20px;
+    padding: 300px 0 0;
+    transition: all .5s ease .5s;
+}
+
+.tivtfore h3:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 0 0 -35px;
+    width: 70px;
+    height: 3px;
+    clear: both;
+    transition: all .5s ease-out .1s;
+}
+
+.tfore:hover .tivtfore {
+    transition: all .5s ease .1s;
+    margin: 0;
+    padding: 15px 30px;
+}
+
+.tfore:hover .tivtfore h3 {
+    padding: 10px 0 0;
+    transition: all .5s ease .3s;
+}
+
+.tfore:hover .tivtfore h3:before {
+    top: 0;
+    transition: all .5s ease-out .5s;
+}
+
+.tivtfore .tbutton {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 200px 0;
+    display: inline-block;
+    font: bold 16px/30px 'Open Sans Condensed';
+    transition: all 1.5s ease .1s;
+}
+
+.tfore:hover .tivtfore .tbutton {
+    transition: all .5s ease .5s;
+    margin: 0;
+}
+
+.eiginn {
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.eiginn img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.eiginn .wo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .5s ease .1s;
+}
+
+.eiginn:hover .wo {
+    transition: all .5s ease .1s;
+}
+
+.eiginn .titr {
+    position: absolute;
+    bottom: 150px;
+    left: 30px;
+    right: 30px;
+    z-index: 20;
+    text-align: center;
+    font: bold 16px 'Open Sans Condensed';
+    opacity: 0;
+    transition: all .5s ease .1s;
+}
+
+.eiginn .titr h3 {
+    padding: 0 0 15px;
+}
+
+.eiginn .titr h3:after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    margin: 0;
+    width: 0;
+    height: 4px;
+    clear: both;
+    transition: all .5s ease .5s;
+}
+
+.eiginn:hover .titr {
+    bottom: 60px;
+    opacity: 1;
+    transition: all .5s ease .1s;
+}
+
+.eiginn:hover .titr h3:after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    margin: 0 -50px 0 0;
+    width: 100px;
+    height: 3px;
+    clear: both;
+    transition: all .5s ease .5s;
+}
+
+
+/* FIRST PARALLAX */
+
+.top-parallax {
+    padding: 0;
+}
+
+.inn-parallax {
+    max-width: 600px;
+    text-align: left;
+    padding: 100px 0;
+}
+
+.inn-parallax h1 {
+    font: bold 45px/1.1 Montserrat;
+    padding: 20px 0;
+}
+
+.con-parallax {
+    font: 300 13px/1.5 Montserrat;
+}
+
+
+/* TESTIMONIAL */
+
+.tes-parallax {
+    padding: 0;
+}
+
+.leftpar {
+    width: 35%;
+    float: left;
+    text-align: left;
+    padding: 70px 0;
+    margin: 0 auto;
+}
+
+.lefttes {
+    border-right: 1px solid rgba(250, 250, 250, 0.4);
+    margin: 0 40px 0 0;
+    padding-right: 40px;
+    color: #fff;
+}
+
+.leftpar h1 {
+    position: relative;
+    color: #fc0;
+    font: bold 45px/1.1 Montserrat;
+    padding: 0 0 15px;
+    margin-bottom: 15px;
+}
+
+.leftpar h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 70px;
+    height: 3px;
+    background: #fff;
+    clear: both;
+    transition: all .5s ease .5s;
+}
+
+.lefttext {
+    color: #fff;
+    font: 300 12px/1.5 Montserrat;
+    margin: 0 0 30px;
+}
+
+.tesbutton {
+    border-radius: 40px;
+    display: inline-block;
+    border: 2px solid #f7b005;
+    height: 40px;
+    padding: 0 20px;
+    margin: 30px 8px 0 5px;
+    color: #035;
+    background: #f7b005;
+    font: bold 13px/40px 'Open Sans';
+    letter-spacing: 4px;
+}
+
+.tesbutton a {
+    color: #036;
+}
+
+.rightpar {
+    width: 65%;
+    float: left;
+    text-align: left;
+    padding: 70px 0;
+    margin: 0 auto;
+}
+
+.rightpar .bfcarousel {
+    color: #fff;
+}
+
+.item .psay img {
+    width: 120px;
+    height: 120px;
+    border-radius: 70px;
+    margin: 0 40px 0 0;
+    float: left;
+}
+
+.star {
+    color: #fff;
+    padding: 10px 0;
+    font: 300 12px Montserrat;
+}
+
+.star .fa {
+    font-size: 20px;
+    color: #fc0;
+    margin-bottom: 10px;
+}
+
+.tes-cont {
+    font: 300 22px Montserrat;
+    margin-left: 160px;
+}
+
+.testimo.owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+    position: absolute;
+    bottom: -70px;
+    left: 50%
+}
+
+
+/* PACKAGE */
+
+.compack {
+    margin: 0;
+    padding: 40px 0;
+}
+
+.compack-head {
+    text-align: center;
+    font: 700 45px 'Montserrat' ! important;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.compack-desc {
+    text-align: center;
+    font: 300 13px/1.4 'Montserrat';
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.topprice {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.comprice {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.comprice h3 {
+    position: relative;
+    display: inline;
+    margin: 0 auto;
+    font: bold 80px/1.0 'Montserrat';
+    letter-spacing: -4px;
+    transition: all .5s ease .1s;
+}
+
+.comprice h3 .cur {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 30px;
+    margin-left: -40px;
+    font: bold 18px 'Open Sans Condensed';
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    border-radius: 30px;
+}
+
+.comprice h3 .jum {
+    position: absolute;
+    width: 30px;
+    right: -15px;
+    top: 10px;
+    margin-right: -10px;
+    font: 24px 'Open Sans Condensed';
+    letter-spacing: 0px;
+}
+
+.comprice h3 .dur {
+    position: absolute;
+    width: 30px;
+    right: -15px;
+    bottom: 15px;
+    margin-right: -10px;
+    font: 24px 'Open Sans Condensed';
+    letter-spacing: 0px;
+}
+
+.bfpricing {
+    display: block;
+    padding: 30px 0 45px;
+}
+
+.homeprice {
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+.outprice {
+    margin: 5px;
+    position: relative;
+}
+
+.pop .outprice {
+    margin: 5px 5px 0;
+}
+
+.outprice:hover {
+    box-shadow: 0 0 20px #aaa;
+    transition: all .3s ease-out .1s;
+}
+
+.outprice .pricimg {
+    overflow: hidden;
+}
+
+.outprice .pricimg img {
+    width: 100%;
+    display: block;
+    transition: all .5s ease .1s;
+    transform: scale(1);
+    height: auto;
+}
+
+.homeprice:hover .outprice .pricimg img {
+    transition: all .5s ease .1s;
+    transform: scale(1.3);
+}
+
+.outprice ul {
+    width: 100%;
+    list-style: none;
+}
+
+.outprice ul li {
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+    font: 13px/50px Montserrat;
+}
+
+.outprice ul li.linkor {
+    padding: 15px 0;
+}
+
+.outprice ul li.linkor a {
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px;
+	border-radius: 4px;
+	letter-spacing: 0;
+	transition: all .5s ease .1s;
+}
+
+.outprice ul li.linkor:hover a {
+	padding: 0 22px;
+	letter-spacing: 2px;
+	transition: all .5s ease .1s;
+}
+
+.thepop {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+    font: bold 16px/40px 'Open Sans Condensed';
+    position: absolute;
+    left: 0;
+    top: -40px;
+}
+
+.packname {
+    width: 100%;
+    height: 80px;
+}
+
+.packtitle {
+    font: bold 26px/80px 'Open Sans Condensed';
+    text-align: center;
+}
+
+.pop .comprice {
+    letter-spacing: -4px;
+}
+
+.pop .outprice ul li {
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* CALL US */
+
+.bfcallus {
+    padding: 20px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.bfcallus h1 {
+    display: inline;
+    float: left;
+    font: 30px/50px 'Montserrat';
+}
+
+.com-calldesc {
+    float: right;
+    display: inline;
+    height: 50px;
+    width: auto;
+    padding: 0 30px;
+    border-radius: 50px;
+    margin: 0 0 0 60px;
+    font: bold 25px/50px 'Montserrat';
+}
+
+/* TEAM WORKS */
+
+.team-one {
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-one img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-one .ho {
+    position: absolute;
+    height: auto;
+    bottom: -300px;
+    left: 20px;
+    right: 20px;
+    z-index: 10;
+    transition: all .5s ease .2s;
+}
+
+.team-one:hover .ho {
+    transition: all .5s ease .1s;
+    bottom: 20px;
+}
+
+.teamco {
+    padding: 30px 30px 20px;
+    text-align: center;
+}
+
+.teamco h3 {
+    font: bold 16px/1.2 'Open Sans Condensed';
+    margin: 0 0 10px;
+    padding: 0;
+    transition: all .5s ease .5s;
+    text-transform: uppercase;
+}
+
+.teamco h5 {
+    font: 300 11px/1.2 'Open Sans';
+    margin: 0;
+    padding: 0;
+    transition: all .5s ease .5s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.teamsos {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.teamsos .fa {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all .5s ease .5s
+}
+
+.team-one:hover .teamsos .fa {
+    margin-top: 0;
+    transition: all .3s ease .5s
+}
+ 
+.teamttl {
+    position: relative;
+    font: bold 30px 'Montserrat';
+    padding: 0 0 15px;
+    margin: 0 0 25px 5px;
+}
+
+.teamttl:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100px;
+    height: 3px;
+    clear: both;
+    transition: all .5s ease .5s;
+}
+
+.bfteam {
+    display: block;
+}
+
+.loop-team {
+    padding: 0;
+}
+
+.teamlist {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.team-one {
+    margin: 5px;
+    position: relative;
+}
+
+.teamslide .owl-nav {
+    display: block ! important;
+    position: absolute;
+    top: -80px ! important;
+    display: inline;
+    height: 40px ! important;
+    width: 80px ! important;
+    padding: 0 ! important;
+    border-radius: 30px ! important;
+    right: 0 ! important;
+    overflow: hidden;
+}
+
+.teamslide.owl-theme .owl-nav [class*="owl-"] {
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    background: transparent;
+    height: 40px;
+    text-align: center;
+    border-radius: 0;
+}
+
+.teamslide.owl-theme .owl-nav .owl-prev .fa {
+    width: 39px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.teamslide.owl-theme .owl-nav .owl-next .fa {
+    width: 39px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.compropartner {}
+
+.partners img {
+    margin: 0 auto;
+    filter: grayscale(100%);
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+.com-post {
+    display: inline-block;
+    width: 100%;
+}
+
+.comtent {
+    width: 70%;
+    float: left;
+}
+
+.comtent.full {
+    width: 100%;
+    float: none;
+}
+
+.beloop {
+    padding: 0 50px 0 0;
+}
+
+.comtent.full .beloop {
+    padding: 0;
+}
+
+.comtent.full .com-archive .teamwork {
+    width: 25%;
+    float: left;
+}
+
+.comtent.full .com-archive img {
+    margin: 0;
+}
+
+.com-archive .slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+.com-meta h1 {
+    font: 700 34px/1.2 Montserrat;
+    margin-bottom: 15px;
+    padding: 0 0 15px;
+    position: relative;
+}
+
+.com-meta h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 1px;
+    clear: both
+}
+
+.com-meta img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 0 25px;
+}
+
+.data-event {
+    width: 50%;
+    float: left;
+    font: 300 12px/30px 'Montserrat';
+}
+
+.meta-share {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 50px;
+}
+
+.meta-share .fa {
+    width: 30px;
+    font-size: 18px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+	color: #fff;
+}
+
+.meta-share .fa-facebook {
+    background: #0055bd;
+}
+
+.meta-share .fa-twitter {
+    background: #22bbff;
+}
+
+.meta-share .fa-google-plus {
+    background: #dd0000;
+}
+
+.meta-share .fa-whatsapp {
+    background: #009c3b;
+}
+
+.the-compost {
+    font: 300 13px/1.5 'Montserrat';
+}
+
+.the-compost p {
+    margin-bottom: 20px;
+}
+
+.the-compost table td {
+    padding: 0 0 40px;
+    border: 0;
+    vertical-align: top;
+}
+
+.the-compost h1,
+.the-compost h2,
+.the-compost h3,
+.the-compost h4,
+.the-compost h5,
+.the-compost h6 {
+    font-weight: bold;
+    font-family: 'Montserrat', Geneva, "Times New Roman", times;
+    margin: 15px 0;
+}
+
+.the-compost h1 {
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.the-compost h2 {
+    font-size: 22px;
+}
+
+.the-compost h3 {
+    font-size: 20px;
+}
+
+.the-compost h4 {
+    font-size: 18px;
+}
+
+.the-compost h5 {
+    font-size: 16px;
+}
+
+.the-compost h5 {
+    font-size: 14px;
+}
+
+.the-compost ol {
+    list-style: decimal;
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.the-compost ul {
+    list-style: disc;
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.the-compost li {
+    margin: 3px 0;
+}
+
+.the-compost blockquote {
+    padding: 0 15px 0 35px;
+    border-left: 2px solid #fc0;
+}
+
+.the-compost blockquote p {
+    font: italic 300 15px/1.5 'Montserrat', Geneva, "Times New Roman", times;
+}
+
+.the-compost .attachment img {
+    max-width: 100%;
+}
+
+.the-compost .alignnone,
+.the-compost img.alignnone {
+    clear: both;
+    display: block;
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.the-compost .alignleft,
+.the-compost img.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 25px;
+    margin-top: 8px;
+    max-width: 100%;
+}
+
+.the-compost .alignright,
+.the-compost img.alignright {
+    display: inline;
+    float: right;
+    margin-left: 25px;
+    margin-top: 8px;
+    max-width: 100%;
+}
+
+.the-compost .aligncenter,
+.the-compost img.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.the-compost img.alignleft,
+.the-compost img.alignright,
+.the-compost img.aligncenter {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.the-compost .wp-caption {
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 4px;
+    text-align: center;
+}
+
+.the-compost .wp-caption img {
+    margin: 5px 5px 0;
+    max-width: 96%;
+}
+
+.the-compost .wp-caption p.wp-caption-text {
+    font-size: 10px;
+    margin: 5px;
+}
+
+.the-compost .wp-smiley {
+    margin: 0;
+}
+
+.the-compost .gallery {
+    margin: 0 auto 25px ! important;
+}
+
+.the-compost .gallery .gallery-item {
+    float: left;
+    margin: 0 0 -10px !important;
+    text-align: center;
+}
+
+.the-compost .gallery.gallery-columns-1 .gallery-item {
+    width: 100% !important;
+}
+
+.the-compost .gallery.gallery-columns-2 .gallery-item {
+    width: 50% !important;
+}
+
+.the-compost .gallery.gallery-columns-3 .gallery-item {
+    width: 33.333% !important;
+}
+
+.the-compost .gallery.gallery-columns-4 .gallery-item {
+    width: 25% !important;
+}
+
+.the-compost .gallery.gallery-columns-6 .gallery-item {
+    width: 16.16777% !important;
+}
+
+.the-compost .gallery.gallery-columns-8 .gallery-item {
+    width: 12.5% !important;
+}
+
+.the-compost .gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    border: none !important;
+    margin-bottom: 0;
+}
+
+.the-compost .gallery .gallery-caption {
+    font-size: 14px;
+    margin: 0 0 14px;
+}
+
+.the-compost .gallery dl {
+    margin: 0;
+}
+
+.the-compost .gallery br+br {
+    display: none;
+}
+
+.the-compost .attachment img {
+    display: block;
+    margin: 0 auto;
+}
+
+.the-compost iframe {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 15px;
+}
+
+.the-compost .post-password-form {
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 30px;
+    margin: 0 0 40px;
+}
+
+.the-compost .post-password-form input[type=submit] {
+    font: 300 13px Montserrat;
+    height: 25px;
+}
+
+.singlemore {
+    width: 50%;
+    float: left;
+    color: #777;
+    margin: 0 0 15px;
+    min-height: 65px;
+}
+
+.singlemore table {
+    font: 400 12px/1.4 'Montserrat';
+}
+
+.tdtop {
+    vertical-align: top;
+}
+
+.timore {
+    padding: 0 40px 0 0;
+}
+
+.timore a {
+    font: 14px Montserrat;
+}
+
+.timore span {
+    font: 300 11px/1.4 'Montserrat';
+}
+
+.cp-footer {
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.cp-footer a {
+    padding: 0 10px;
+    display: inline-block;
+    height: 24px;
+    font: 300 12px/24px Montserrat;
+}
+
+.post-nav {
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.more .more-meta h1 {
+    font: 700 24px/1.2 Montserrat;
+    margin: 40px 0 15px;
+    padding: 0 0 15px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.more .more-meta h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 1px;
+    clear: both
+}
+
+.comment .tdavatar {
+    width: 120px;
+}
+
+.comment .tdavatar img {
+    width: 65px;
+    height: 65px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 80px;
+    background: #fff;
+}
+
+.comment .comcom {
+    vertical-align: top;
+}
+
+.comment .comment-meta {
+    background: #fff;
+    padding: 15px 20px;
+    font: 300 12px Montserrat;
+    color: #777;
+    border: 1px solid #ddd;
+    position: relative;
+    border-radius: 6px;
+    margin: 0 0 30px;
+}
+
+.comment .comment-meta:after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    left: -20px;
+    top: 22px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 20px solid #ddd;
+    clear: both
+}
+
+.comment .comment-meta:before {
+    content: '';
+    position: absolute;
+    z-index: 4;
+    left: -18px;
+    top: 22px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 20px solid #fff;
+    clear: both
+}
+
+.com-author {
+    color: #556;
+    font: 400 15px/1.6 Montserrat;
+}
+
+.com-author a {
+    color: #556;
+}
+
+.com-date {
+    padding-bottom: 15px;
+}
+
+.com-mod {
+    color: #f00;
+    font: italic 300 13px/1.3 Montserrat;
+    padding-bottom: 15px;
+}
+
+.comform-textarea {
+    width: 65%;
+    float: left;
+}
+
+.comarea {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    margin: 0 20px 20px 0;
+    padding: 15px;
+}
+
+.comarea textarea {
+    border: 0;
+    padding: 0;
+    font: 300 12px/1.3 Montserrat;
+    width: 100%;
+    height: 130px;
+}
+
+.comauthor,
+.comemail,
+.comurl {
+    width: 35%;
+    float: right;
+    margin-bottom: 8px;
+}
+
+.comauthor div,
+.comemail div,
+.comurl div {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+}
+
+.comauthor input,
+.comemail input,
+.comurl input {
+    border: 0;
+    padding: 0;
+    font: 300 12px/1.3 Montserrat;
+}
+
+.form-submit .submit {
+    height: 34px;
+    border-radius: 5px;
+    border: 0;
+    background: #035;
+    color: #fff;
+    padding: 0 16px;
+    margin: 0 0 0 2px;
+    font: 400 14px Montserrat;
+}
+
+.comment_message {
+    line-height: 30px;
+}
+
+.agendas {
+    position: relative;
+}
+
+.agendas table {
+    width: 100%;
+    font: 300 12px/1.4 'Montserrat';
+    color: #035;
+}
+
+.agendas .lpdate {
+    background: #036;
+    width: 100px;
+    height: 100px;
+}
+
+.dateleft {
+    vertical-align: top;
+}
+
+.lpdate {
+    width: 44px;
+    height: 44px;
+    border-radius: 2px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.lpdate .date {
+    font: 30px/30px 'Montserrat';
+}
+
+.lpdate .monye {
+    font: bold 8px/10px 'Open Sans';
+}
+
+.agendas .lpdate .date {
+    font: 60px/70px 'Montserrat';
+}
+
+.agendas .lpdate .monye {
+    font: bold 18px/20px 'Open Sans';
+}
+
+.dateagen {
+    padding: 0 200px 0 0;
+}
+
+.detback {
+    position: relative;
+    font: 300 12px/1.6 Montserrat;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 60px;
+    padding: 20px;
+}
+
+.imagouter {
+    position: relative;
+}
+
+#clockdiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    z-index: 30;
+}
+
+#clockdiv .ring {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 45px;
+    display: inline;
+    float: left;
+    margin-right: 3px;
+    position: relative;
+}
+
+#clockdiv span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#clockdiv small {
+    display: block;
+    font-size: 7px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    line-height: 17px;
+    left: 0;
+    right: 0;
+}
+
+.snormal {
+    position: relative;
+}
+
+.snormal table {
+    font: 300 12px/1.4 'Montserrat';
+}
+
+.team-img {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.teamsingco {
+    padding: 30px 30px 20px;
+    text-align: center;
+}
+
+.teamsingco h3 {
+    font: bold 22px/1.2 'Open Sans Condensed';
+    color: #556;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: all .5s ease .5s;
+    text-transform: uppercase;
+}
+
+.teamsingco h5 {
+    font: 300 12px/1.2 'Open Sans';
+    color: #777;
+    margin: 0;
+    padding: 0;
+    transition: all .5s ease .5s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.teamsingsos {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.teamsingsos .fa {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 15px;
+    text-align: center;
+    border: 1px solid transparent;
+    background: #eee;
+    color: #777;
+}
+
+.teamsingsos .fa:hover {
+    background: #ddd;
+}
+
+.single-team .team-one .ho {
+    position: absolute;
+    height: auto;
+    bottom: -300px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transform: scale(0);
+    z-index: 10;
+    transition: all .5s ease .2s;
+}
+
+.single-team .team-one:hover .ho {
+    transition: all .5s ease .1s;
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1);
+}
+
+.single-team .team-one .ho h3 {
+    margin-bottom: 10px;
+    position: relative;
+    height: 40px;
+    font: bold 15px/40px 'Open Sans Condensed';
+}
+
+.single-team .team-one .ho h3:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin: 0 0 0 -15px;
+    width: 30px;
+    height: 1px;
+    clear: both
+}
+
+.single-team .team-one .ho h3 a {
+    line-height: 100%;
+}
+
+.single-team .team-one .ho span {
+    font: 300 11px 'Open Sans';
+    text-transform: uppercase;
+    line-height: 100%;
+    letter-spacing: 1px;
+}
+
+.single-team .teamslide .owl-nav.disabled {
+    display: none ! important;
+}
+
+.single-testimoni .rightpar {
+    width: 65%;
+    float: left;
+    text-align: left;
+    padding: 70px 0;
+    margin: 0 auto;
+}
+
+.single-testimoni .rightpar .bfcarousel {
+    color: #777;
+}
+
+.single-testimoni .item .psay img {
+    width: 120px;
+    height: 120px;
+    border-radius: 70px;
+    margin: 0 40px 0 0;
+    float: left;
+}
+
+.single-testimoni .star {
+    color: #777;
+    padding: 10px 0;
+    font: 300 12px Montserrat;
+}
+
+.single-testimoni .star .fa {
+    font-size: 20px;
+    color: #fc0;
+    margin-bottom: 10px;
+}
+
+.single-testimoni .tes-cont {
+    font: 300 22px Montserrat;
+    margin-left: 160px;
+}
+
+.hisyear {
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+.tahun {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font: bold 22px Montserrat;
+}
+
+.histo:before {
+    content: '';
+    position: absolute;
+    z-index: 4;
+    left: -18px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+	border-right: 20px solid #fff;
+    clear: both;
+}
+
+.histo:after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    left: -20px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+	border-right: 20px solid #ddd;
+    clear: both;
+}
+
+.circle {
+    position: absolute;
+	background: #fff;
+    border: 3px solid #ddd;
+    border-radius: 30px;
+    width: 16px;
+    height: 16px;
+    right: -63px;
+    top: 5px;
+    z-index: 4;
+}
+
+.comhisto {
+    width: 75%;
+    float: right;
+    position: relative;
+}
+
+.innhisto {
+    border-left: 4px solid #ddd;
+    padding: 0 0 30px 40px;
+}
+
+.histo {
+    position: relative;
+	background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.com-archive img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.com-archive h2 {
+    font: bold 26px/1.2 Montserrat;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+}
+
+.com-archive h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 70px;
+    height: 2px;
+    background: #035;
+    clear: both
+}
+
+.com-archive .post-meta {
+    line-height: 40px;
+}
+
+.com-archive .arch {
+    margin-bottom: 50px;
+}
+
+.com-bar {
+    width: 30%;
+    float: left;
+}
+
+.com-bar .widget .agen-bar {
+    position: relative;
+    border-radius: 3px;
+    margin: -15px -20px 0;
+}
+
+.com-bar .widget .agen-bar img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.com-bar .widget .comdates {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.com-bar .widget .comdates span {
+    height: 30px;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.com-bar .widget .agenev-bar {
+    text-align: center;
+    font: 400 12px/1.1 Montserrat;
+    padding: 25px 20px;
+	margin: 0 -20px -20px;
+}
+
+.com-bar .widget .agenev-bar a {
+    font: 700 20px/1.3 Montserrat;
+}
+
+.com-bar .widget .rpthumb-date {
+    font: 300 11px/1.8 Montserrat;
+}
+
+.com-bar .search_form {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.com-bar .search_form input {
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    font: 400 13px/35px Montserrat;
+    border: 0;
+}
+
+.com-bar .search_form button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 0;
+}
+
+.com-bar .search_form button .fa {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.com-bar .widget {
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.com-bar .widget a {
+    font: 400 13px/20px Montserrat;
+}
+
+.com-bar .widget ul,
+.com-bar .widget-small ol {
+    margin: 10px 0;
+}
+
+.com-bar .widget li,
+.com-bar .widget-small li {
+    line-height: 20px;
+    padding: 8px 0;
+}
+
+.com-bar .widget h3 {
+    font: 700 15px Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    margin: -20px -20px 15px;
+}
+
+.lastpost {
+    padding: 0 0 15px;
+    margin: 0;
+}
+
+.lastpost img {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 50px;
+}
+
+.com-bar .widget select {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font: 400 13px/30px Montserrat;
+}
+
+.com-bar .widget .tagcloud {
+    padding: 10px 0
+}
+
+.com-bar .widget .tagcloud a {
+    margin: 0 2px 4px 0;
+    padding: 3px 12px;
+    line-height: 20px;
+    font: 400 13px/20px Montserrat !important;
+    display: inline-block;
+    text-transform: lowercase;
+}
+
+.com-bar .widget .gallery {
+    margin: 0 ! important;
+}
+
+.com-bar .widget .gallery .gallery-item {
+    float: left;
+    margin: 0 !important;
+    text-align: center;
+}
+
+.com-bar .widget .gallery .gallery-columns-1 .gallery-item {
+    width: 100% !important;
+}
+
+.com-bar .widget .gallery .gallery-columns-2 .gallery-item {
+    width: 50% !important;
+}
+
+.com-bar .widget .gallery .gallery-columns-3 .gallery-item {
+    width: 33.333% !important;
+}
+
+.com-bar .widget .gallery .gallery-columns-4 .gallery-item {
+    width: 25% !important;
+}
+
+.com-bar .widget .gallery .gallery-columns-6 .gallery-item {
+    width: 16.16777% !important;
+}
+
+.com-bar .widget .gallery .gallery-columns-8 .gallery-item {
+    width: 12.5% !important;
+}
+
+.com-bar .widget .gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none !important;
+    margin-bottom: 0;
+}
+
+.com-bar .widget .gallery .gallery-caption {
+    color: #888;
+    font-size: 14px;
+    margin: 0 0 14px;
+}
+
+.com-bar .widget .gallery dl {
+    margin: 0;
+}
+
+.com-bar .widget .gallery br+br {
+    display: none;
+}
+
+.com-bar .widget img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.com-bar .widget img.rss-widget-icon {
+    display: none;
+}
+
+.com-bar .widget table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.com-bar .widget table th,
+.com-bar .widget table td {
+    height: 30px;
+    font: 400 13px Montserrat;
+    line-height: 30px;
+}
+
+.com-bar .widget table td a {
+    font: 400 13px/20px Montserrat;
+}
+
+.com-bar .widget caption {
+    font: 300 15px/30px Montserrat;
+}
+
+.com-bar .widget .rpthumb img {
+    float: left;
+    margin: 2px 0 15px;
+    padding: 6px;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.com-bar .widget .rpthumb p {
+    margin: 0 0 15px 80px;
+}
+
+.com-bar .textwidget {
+    font: 400 13px/1.4 'Montserrat';
+}
+
+.com-bar .textwidget p {
+    margin: 0 0 20px;
+}
+
+.com-bar .textwidget ol {
+    list-style: decimal;
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.com-bar .textwidget ul {
+    list-style: disc;
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.com-bar .textwidget li {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.com-bar .textwidget blockquote {
+    padding: 0 15px 0 25px;
+}
+
+.com-bar .textwidget blockquote p {
+    font: italic 400 14px/1.5 'Montserrat', Geneva, "Times New Roman", times;
+}
+
+.comcontact {
+    font: 700 34px/1.4 Montserrat;
+    margin: 0 0 45px;
+    padding: 0 0 15px;
+    text-align: center;
+    position: relative;
+}
+
+.comcontact:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    margin-left: -50px;
+    clear: both
+}
+
+.kleft {
+    width: 50%;
+    float: right;
+    font: 300 14px/20px Montserrat;
+}
+
+.kright {
+    width: 50%;
+    float: left;
+    font: 300 14px/20px Montserrat;
+}
+
+.com-contact table {
+    width: 100%;
+}
+
+.com-contact .kleft table tr {}
+
+.address {
+    font: 300 14px/17px Montserrat;
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+.address .fa {
+    font-size: 26px;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin: 7px 0 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.kright .fa,
+.kleft .fa {
+    font-size: 26px;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin: 7px 0;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.kright td {
+    vertical-align: middle;
+}
+
+.kleft td {
+    vertical-align: middle;
+}
+
+.vibar {
+    width: 100%;
+    height: 180px;
+}
+
+.footbar {
+    display: inline-block;
+    width: 100%;
+}
+
+.inner-footer {
+    margin: 0 -20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    display: inline-block;
+    font: 300 12px Montserrat;
+    width: 100%;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.foot-bar {
+    width: 33.3333%;
+    float: left;
+}
+
+.foot-inn {
+    margin: 0 20px;
+}
+
+.foot-inn.last {
+    margin: 0;
+}
+
+.foot-bar .widget {
+    padding: 20px 0 0;
+    margin-bottom: 15px;
+}
+
+.foot-bar .search_form {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.foot-bar .search_form input {
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    font: 400 13px/35px Montserrat;
+    border: 0;
+}
+
+.foot-bar .search_form button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 0;
+}
+
+.foot-bar .search_form button .fa {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.foot-bar .widget a {
+    font: 400 13px/20px Montserrat;
+}
+
+.foot-bar .widget ul,
+.foot-bar .widget-small ol {
+    margin: 10px 0;
+}
+
+.foot-bar .widget li,
+.foot-bar .widget-small li {
+    line-height: 20px;
+    padding: 8px 0;
+}
+
+.foot-bar .widget li:last-child,
+.foot-bar .widget-small li:last-child {
+    border-bottom: 0;
+}
+
+.foot-bar .widget h3 {
+    font: 700 18px Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+}
+
+.foot-bar .widget .agen-bar {
+    position: relative;
+    border-radius: 3px;
+    margin: 0;
+}
+
+.foot-bar .widget .agen-bar img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.foot-bar .widget .comdates {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.foot-bar .widget .comdates span {
+    height: 30px;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.foot-bar .widget .agenev-bar {
+    text-align: center;
+    font: 400 13px/1.1 Montserrat;
+    padding: 25px 20px;
+}
+
+.foot-bar .widget .agenev-bar a {
+    font: 700 20px/1.3 Montserrat;
+}
+
+.lastpost {
+    padding: 0 0 15px;
+    margin: 0;
+}
+
+.lastpost img {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 50px;
+}
+
+.foot-bar .widget select {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font: 400 13px/30px Montserrat;
+}
+
+.foot-bar .widget .tagcloud {
+    padding: 10px 0
+}
+
+.foot-bar .widget .tagcloud a {
+    margin: 0 2px 4px 0;
+    padding: 3px 12px;
+    line-height: 20px;
+    font: 400 13px/20px Montserrat !important;
+    display: inline-block;
+    text-transform: lowercase;
+}
+
+.foot-bar .widget .gallery {
+    margin: 0 ! important;
+}
+
+.foot-bar .widget .gallery .gallery-item {
+    float: left;
+    margin: 0 !important;
+    text-align: center;
+}
+
+.foot-bar .widget .gallery .gallery-columns-1 .gallery-item {
+    width: 100% !important;
+}
+
+.foot-bar .widget .gallery .gallery-columns-2 .gallery-item {
+    width: 50% !important;
+}
+
+.foot-bar .widget .gallery .gallery-columns-3 .gallery-item {
+    width: 33.333% !important;
+}
+
+.foot-bar .widget .gallery .gallery-columns-4 .gallery-item {
+    width: 25% !important;
+}
+
+.foot-bar .widget .gallery .gallery-columns-6 .gallery-item {
+    width: 16.16777% !important;
+}
+
+.foot-bar .widget .gallery .gallery-columns-8 .gallery-item {
+    width: 12.5% !important;
+}
+
+.foot-bar .widget .gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none !important;
+    margin-bottom: 0;
+}
+
+.foot-bar .widget .gallery .gallery-caption {
+    font-size: 14px;
+    margin: 0 0 14px;
+}
+
+.foot-bar .widget .gallery dl {
+    margin: 0;
+}
+
+.foot-bar .widget .gallery br+br {
+    display: none;
+}
+
+.foot-bar .widget img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.foot-bar .widget img.rss-widget-icon {
+    display: none;
+}
+
+.foot-bar .widget .rpthumb {
+    margin-bottom: 15px;
+}
+
+.foot-bar .widget .rpthumb img {
+    float: left;
+    margin: 6px 0 15px;
+    padding: 0;
+	width: 60px;
+	height: auto;
+}
+
+.foot-bar .widget .rpthumb p {
+    margin: 0 0 15px 80px;
+}
+
+.foot-bar .widget .rpthumb-title {
+    font: 400 13px/1.5 Montserrat;
+    padding-bottom: 12px;
+}
+
+.foot-bar .widget .rpthumb-date {
+    font: 300 11px/1.8 Montserrat;
+}
+
+.foot-bar .widget table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.foot-bar .widget table th,
+.foot-bar .widget table td {
+    height: 30px;
+    font: 400 13px Montserrat;
+    line-height: 30px;
+    border: 1px solid #eee;
+}
+
+.foot-bar .widget table td a {
+    font: 400 13px/20px Montserrat;
+}
+
+.foot-bar .widget caption {
+    font: 400 15px/30px Montserrat;
+}
+
+.foot-bar .textwidget {
+    font: 400 13px/1.4 'Montserrat';
+}
+
+.foot-bar .textwidget p {
+    margin: 0 0 20px;
+}
+
+.foot-bar .textwidget ol {
+    list-style: decimal;
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.foot-bar .textwidget ul {
+    list-style: disc;
+    padding-left: 35px;
+    margin: 15px 0;
+}
+
+.foot-bar .textwidget li {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.foot-bar .textwidget blockquote {
+    padding: 0 15px 0 25px;
+}
+
+.foot-bar .textwidget blockquote p {
+    font: italic 400 14px/1.5 'Montserrat', Geneva, "Times New Roman", times;
+}
+
+.copyright {
+    height: auto;
+    line-height: 25px;
+    text-align: center;
+}
+
+.copyright img {
+    height: 50px;
+    width: auto;
+    margin-right: 50px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+#return-to-top i {
+    margin: 0;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: none;
+}
+
+#return-to-top.ishow i {
+    display: block;
+}
+
+.mob {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -500px;
+    z-index: 1000;
+    width: 210px;
+    padding: 20px;
+    display: block
+}
+
+.mob .close {
+    position: fixed;
+    top: 25px;
+    left: -75px;
+    z-index: 1000;
+    border-radius: 30px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 16px;
+}
+
+.mob.menushow .close {
+    left: 235px;}
+
+.mob .outmob {
+    position: relative;
+    overflow: auto;
+}
+
+.mobi .accordion li {
+    display: block;
+    margin: 0;
+    text-align: left;
+    font: bold 14px 'Open Sans Condensed', 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.mobi .accordion li:last-child {
+    border: 0
+}
+
+.mobi .accordion li a {
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    line-height: 36px;
+    margin: 0
+}
+
+.mobi .accordion li a:hover {
+    text-decoration: none
+}
+
+.sub-menu:after {
+    display: none
+}
+
+.mobi .accordion li.menu-item-has-children:after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    width: 0;
+    height: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    clear: both
+}
+
+.mobi .accordion li ul li a {
+    margin: 0 44px 0 0
+}
+
+.mobi .accordion li ul li ul li a {
+    margin: 0 44px 0 0
+}
+
+#heads-one.menushow,
+#heads-cenlo.menushow,
+#heads-thre.menushow,
+#heads-pat.menushow {
+    left: 250px;
+    margin-right: -250px;
+}
+
+.mob.menushow {
+    left: 0 ! important;
+	overflow: auto;
+}
+
+.slidewrapper {
+    position: relative;
+}
+
+.slidewrapper.menushow {
+    margin-left: 250px ! important;
+    margin-right: -250px;
+}
+
+#heads-one .fa.open {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 25px;
+    display: none;
+    z-index: 999;
+}
+
+#heads-cenlo .fa.open {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 25px;
+    display: none;
+    z-index: 999;
+}
+
+.previouspostslink {
+    float: left;
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 14px;
+    font-weight: bold;
+    height: 30px;
+    font-size: 16px;
+}
+
+.nextpostslink {
+    float: right;
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 14px;
+    font-weight: bold;
+    height: 30px;
+    font-size: 16px;
+}
+
+.previouspostslink .fa,
+.nextpostslink .fa {
+    line-height: 32px;
+    height: 32px;
+}
+
+@media screen and (max-width:1024px) {
+    .ci-container {
+        margin: 0 15px;
+        width: auto;
+    }
+    #heads-pat .rcon {
+        padding: 15px 0;
+    }
+    #heads-pat .patlo {
+        padding: 10px 0;
+    }
+    #heads-cenlo .cl-logo {
+        width: 200px;
+        height: 60px;
+        padding: 10px 0;
+    }
+    #heads-cenlo .logo {
+        margin: 0 0 0 -100px;
+        width: 200px;
+        height: 60px;
+    }
+    #heads-cenlo .cl-logo img {
+        max-width: 200px;
+        height: auto;
+        max-height: 50px;
+    }
+    #heads-cenlo .clmenu {
+        margin: 0 0 0 120px;
+        height: 60px;
+    }
+    #heads-cenlo .crmenu {
+        margin: 0 120px 0 0;
+        height: 60px;
+    }
+    #heads-cenlo .mheader-two {
+        height: 60px;
+    }
+    #heads-cenlo .mheader-two li {
+        line-height: 60px;
+    }
+    #heads-cenlo .logo {
+        border-bottom-width: 10px;
+    }
+    #heads-cenlo .mheader-two li ul {
+        top: 60px;
+    }
+    #heads-cenlo .mheader-two li:hover ul {
+        top: 60px;
+    }
+    #heads-cenlo .mheader-two li ul {
+        top: 60px;
+    }
+    .slider-n1 {
+        bottom: 60px;
+    }
+    .slider-n2 .heading {
+        font: 700 35px/1.0 Montserrat, 'PT Sans', san-serif;
+    }
+    .slider-n2 .desc {
+        font: 300 15px/1.2 'PT Sans', san-serif;
+        margin: 0 0 20px;
+    }
+    .slider-n2 .n2outer {
+        max-width: 35%;
+    }
+    .slider-n2 .inleftbut,
+    .slider-n2 .inrightbut {
+        height: 30px;
+        padding: 0 15px;
+        margin: 4px 5px 0 5px;
+        font: bold 12px/30px 'Open Sans';
+        letter-spacing: 2px;
+    }
+    .slider-n4 .under3 {
+        padding: 15px 20px 20px;
+    }
+    .slider-n3 {
+        left: 30px;
+        right: 30px;
+    }
+    .slider-n3 .heading {
+        font: 700 50px/1.0 Montserrat, 'PT Sans', san-serif;
+    }
+    .slider-n3 .desc {
+        font: 300 15px/1.2 'PT Sans', san-serif;
+        margin: 0 0 20px;
+    }
+    .slider-n3 .inleftbut,
+    .slider-n3 .inrightbut {
+        height: 30px;
+        padding: 0 15px;
+        margin: 4px 5px 0 5px;
+        font: bold 12px/30px 'Open Sans';
+        letter-spacing: 2px;
+    }
+    .slider-n4 .desc {
+        margin: 0 0 20px;
+    }
+    .toppar {
+        height: 350px !important;
+    }
+    .servhalf {
+        min-height: 200px;
+    }
+    .boxinn {
+        padding: 15px 0;
+    }
+    .rotainn {
+        padding: 15px 0;
+    }
+    .teamco {
+        padding: 30px 20px 20px;
+    }
+    .beloop {
+        padding: 0 15px 0 0;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #ndeslide.heads-cenlo {
+        margin: 32px 0 0;
+        padding: 0;
+    }
+    #ndeslide.heads-cenlo .just-bg {
+        position: relative;
+        top: 0;
+    }
+    #ndeslide.heads-one {
+        padding: 0;
+    }
+    #ndeslide.heads-pat {
+        padding: 0;
+    }
+	#ndeslide.heads-pat.pat1 {
+        margin: 100px 0 0 0;
+    }
+    .bot1,
+    .bot2,
+    .bot,
+    .bot4 {
+        display: none;
+    }
+    .slider-n2 {
+        position: absolute;
+        bottom: 20px;
+    }
+    .slider-n2 .n2outer {
+        max-width: 45%;
+    }
+    .slider-n3 {
+        bottom: 30px;
+    }
+    .slider-n3 .out3r {
+        max-width: 450px;
+        width: auto;
+    }
+    .slider-n3 .heading {
+        font: 700 40px/1.0 Montserrat, 'PT Sans', san-serif;
+    }
+    .nav {
+        display: none;
+    }
+    #heads-one .comsearch {
+        width: 100px;
+    }
+    #heads-one .comsearch .fa.fa-navicon {
+        top: 18px;
+        display: block;
+    }
+    #heads-one .comsearch .fa {
+        color: #fff;
+        height: 36px;
+        line-height: 36px;
+        width: 36px;
+        font-size: 18px;
+    }
+    #heads-one.heads-one .comsearch {
+        background: rgba(0, 80, 122, 0);
+    }
+    .censpan.cenhide {
+        display: none;
+    }
+    #heads-cenlo .cotophead .topsos {
+        float: none;
+        font-size: 18px;
+        width: 100%;
+        display: block;
+        min-height: 35px;
+    }
+    #heads-cenlo .cotophead .topsos .fa.fa-search {
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+    #heads-cenlo .cotophead .topsos .fa.fa-chevron-up {
+        position: absolute;
+        top: 5px;
+        right: 45px;
+        display: block;
+    }
+    #heads-cenlo .fa.open {
+        display: block;
+    }
+    #heads-thre .topheader {
+        height: 60px;
+        position: relative;
+    }
+    #heads-thre .cotophead.cothide {
+        display: none ! important;
+    }
+    #heads-thre .inn .fa-search {
+        background: #fff ! important;
+        color: #035 ! important;
+        text-align: center;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+        height: 30px;
+        width: 35px;
+    }
+    #heads-thre .inn .fa.open.fa-navicon {
+        display: block;
+        position: absolute;
+        right: 38px;
+        bottom: 15px;
+        text-align: center;
+        background: #fff;
+        color: #035;
+        font-size: 25px;
+        line-height: 30px;
+        height: 30px;
+        width: 35px;
+    }
+    #heads-thre .inn .fa-chevron-down {
+        display: block;
+        position: absolute;
+        right: 75px;
+        bottom: 15px;
+        text-align: center;
+        background: #fff;
+        color: #035;
+        font-size: 25px;
+        line-height: 30px;
+        height: 30px;
+        width: 35px;
+    }
+    #heads-thre .logo {
+        height: 60px;
+        width: 120px;
+        position: relative;
+        z-index: 500;
+    }
+    #heads-thre .logo:after {
+        display: none;
+    }
+    #heads-thre .thre-logo {
+        padding: 5px
+    }
+    #heads-thre .inn {
+        width: auto;
+        float: right;
+        position: relative;
+    }
+    #heads-one .rg-after {
+        display: none;
+    }
+    #heads-cenlo .censpan {
+        display: none;
+    }
+    #heads-cenlo .cotophead .topsos .fa {
+        font-size: 22px;
+    }
+    .crmenu,
+    .clmenu {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
+    .fa.open {
+        display: block;
+    }
+    .slider-n4 .under3 {
+        width: 45%;
+    }
+    .slider-n4 {
+        bottom: 30px;
+        left: 20px;
+    }
+    .com-head {
+        font: 700 35px 'Montserrat' !important;
+    }
+    .servhalf {
+        width: 100%;
+        float: none;
+        min-height: auto;
+        margin: 0 0 30px;
+    }
+    .servbox {
+        width: 50%;
+    }
+    .toppar {
+        height: 350px !important;
+    }
+    .inn-parallax h1 {
+        font: bold 35px/1.1 Montserrat;
+    }
+    .comworks h1 {
+        font: bold 35px/1.1 Montserrat;
+    }
+    .rightpar,
+    .leftpar {
+        width: 100%;
+        float: none;
+        padding: 30px 0;
+    }
+    .leftpar {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .lefttes {
+        border-right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .leftpar h1 {
+        font: bold 35px/1.1 Montserrat;
+    }
+    .rightpar {
+        width: auto;
+        margin: 0 30px;
+        padding: 30px 0;
+    }
+    .compack-head {
+        text-align: center;
+        font: 700 35px 'Montserrat' !important;
+    }
+    .homeprice {
+        width: 50%;
+    }
+    .owl-nav,
+    .owl-dots {
+        display: none ! important;
+    }
+    .slider-n1 {
+        bottom: 30px;
+    }
+    .slider-n1 .heading {
+        font-size: 40px;
+    }
+    .slider-n1 .desc {
+        font: 300 15px/1.2 'PT Sans', san-serif;
+    }
+    #heads-thre {
+        height: 60px;
+    }
+    .contcom .him {
+        display: none;
+    }
+    #heads-thre .cotophead {
+        line-height: 60px;
+        position: relative;
+        top: 60px;
+        background: #035;
+        display: none;
+    }
+    #heads-thre .cotophead .topsos {
+        margin-right: 20px;
+    }
+    #heads-thre .topheader .contcom {
+        margin: 0 25px;
+    }
+    #heads-thre .inn .fa-search {
+        bottom: 15px;
+        font-size: 25px;
+        line-height: 30px;
+        height: 30px;
+        width: 35px;
+    }
+    #heads-thre .logo img {
+        max-height: 50px;
+        width: auto;
+    }
+    #heads-pat .overtop {
+        background: rgba(0, 80, 122, 1);
+    }
+    #heads-pat .overbot .rightnav .fa-navicon {
+        display: block;
+    }
+    #heads-pat .patlo {
+        padding: 20px 0;
+        position: relative;
+    }
+    #heads-pat .patlo .fa-chevron-down {
+        position: absolute;
+        top: 30px;
+        font-size: 20px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        display: block;
+    }
+    #heads-pat .logopat {
+        width: 100%;
+        float: none;
+    }
+    #heads-pat .patr {
+        width: 100%;
+        float: none;
+        display: none;
+    }
+    #heads-pat .rcon {
+        padding: 15px 0;
+    }
+    #heads-pat .htop {
+        width: 100%;
+        height: auto;
+    }
+    #heads-pat .pnav li {
+        height: 40px;
+        line-height: 40px;
+    }
+    #heads-pat .hbotnav {
+        height: 40px;
+    }
+    #heads-pat .pnav {
+        display: none;
+    }
+    #heads-pat .overbot .rightnav {
+        position: relative;
+        width: 100%;
+        height: 40px;
+    }
+    #heads-pat .overbot .rightnav .fa-search {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 22px;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+    }
+    #heads-pat .overbot .rightnav .fa-navicon {
+        font-size: 22px;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border-radius: 0;
+        background: #fc0;
+        color: #035;
+    }
+    #heads-pat .overbot .rightnav {
+        height: 40px;
+        line-height: 40px;
+    }
+    #heads-pat .overbot .rightnav .fa {
+        margin-top: 0;
+    }
+    .overtop.ohide {
+        display: none ! important;
+    }
+    #heads-pat .cocall {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    #heads-pat .ccinn {
+        padding: 0;
+        border: 0;
+    }
+    #heads-pat .otcon {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    #heads-pat .listcon span.faem,
+    #heads-pat .listcon span.fafax {
+        display: inline;
+    }
+	#ndeslide.heads-pat  .just-bg {
+	    margin-top:140px;
+	}
+	#ndeslide.heads-pat  .slidecomp	{
+	    margin-top:0;
+	}
+    .rotabox {
+        width: 50%;
+    }
+    .comtent,
+    .com-bar {
+        width: 100%;
+        float: none;
+    }
+    .com-bar {
+        padding: 80px 0 0;
+    }
+    .sidebar {
+        padding: 0 15px;
+    }
+    .foot-bar {
+        width: 50%;
+    }
+    .foot-inn,
+    .foot-inn.last {
+        margin: 0 15px;
+    }
+    .beloop {
+        padding: 0 15px;
+    }
+    .comtent.full .com-archive .teamwork {
+        width: 33.3333%;
+    }
+    .com-contact .ci-container {
+        margin: 0 30px;
+    }
+    .vibar {
+        width: 100%;
+        height: 280px;
+    }
+	.inner-footer {
+        margin: 0 -5px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .admin-bar #heads-one,
+    .admin-bar #heads-cenlo,
+    .admin-bar #heads-thre,
+    .admin-bar #heads-pat {
+        top: 46px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .him {
+        display: none;
+    }
+    #heads-cenlo .cotophead .topsos {
+        font-size: 28px;
+        line-height: 50px;
+        min-height: 50px;
+    }
+    #heads-cenlo .cotophead .topsos .fa.fa-chevron-up {
+        position: absolute;
+        top: 10px;
+        right: 45px;
+        display: block;
+        margin: 0;
+        height: 30px;
+        line-height: 30px;
+        width: 45px;
+    }
+    #heads-cenlo .cotophead .topsos .fa.fa-search {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    #heads-pat .listcon {
+        font: 300 11px/1.5 'Montserrat';
+    }
+    #heads-pat .call {
+        font: 700 15px/1.5 'Open Sans', 'Open Sans';
+    }
+    #ndeslide.heads-pat {
+        padding: 0;
+    }
+    #ndeslide.heads-cenlo {
+        margin: 46px 0 0;
+    }
+ 
+    .slidecomp.norespo .slider-n4,
+    .slidecomp.norespo .slider-n3,
+    .slidecomp.norespo .slider-n2,
+    .slidecomp.norespo .slider-n1 {
+        display: block;
+    }
+    .slider-n2 .n2outer {
+        max-width: 100%;
+    }
+    .slidecomp.norespo .slide img {
+        width: 1000px ! important;
+    }
+    .just-bg.norespo .slidess img {
+        width: 1000px ! important;
+    }
+    .slider-n4,
+    .slider-n3,
+    .slider-n2,
+    .slider-n1 {
+        display: none;
+    }
+    .bot1,
+    .bot2,
+    .bot3,
+    .bot4 {
+        display: none;
+    }
+    .bfcallus {
+        text-align: center;
+    }
+    .bfcallus h1 {
+        display: block;
+        float: none;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .com-calldesc {
+        float: none;
+        display: inline-block;
+        height: 50px;
+        margin: 0;
+    }
+    .workpart {
+        width: 50%;
+    }
+    .leftpar h1:after {
+        left: 50%;
+        margin: 0 0 0 -35px;
+        width: 70px;
+    }
+    .inn-parallax {
+        max-width: 500px;
+    }
+    .slider-n4 .under3 {
+        width: auto;
+        max-width: 400px;
+    }
+    .comtent.full .com-archive .teamwork {
+        width: 50%;
+    }
+    .the-compost iframe {
+        height: 300px;
+    }
+    .comshare {
+        display: none;
+    }
+    .vibar {
+        width: 100%;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width:599px) {
+    .toph {
+        display: none;
+    }
+    #heads-cenlo .cotophead .topsos {
+        float: none;
+        display: block;
+    }
+    #heads-one .topheader {
+        text-align: center;
+    }
+    #heads-cenlo .topheader a.cari {
+        float: right;
+    }
+    #heads-cenlo .topheader a.mcon {
+        float: right;
+    }
+    #heads-cenlo .topheader a.cari .fa {
+        border: 0;
+    }
+    #heads-cenlo .cotophead .topsos .fa.fa-chevron-up {
+        display: block;
+    }
+    #heads-pat .htop {
+        height: auto;
+    }
+    #heads-pat .logopat {
+        width: 100%;
+        float: none;
+    }
+    #heads-pat .patlo img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 250px;
+    }
+    #heads-pat .patr {
+        width: 100%;
+        float: none;
+    }
+    #ndeslide.heads-pat.pat1 {
+        position: relative;
+    }
+	#ndeslide.heads-thre .slidecomp.yesrespo {
+    	margin: 60px auto 0;
+	}
+	#ndeslide.heads-pat .slidecomp.yesrespo {
+	    margin-top: 0px;
+		padding-top: 42px;
+	}
+    .prosearch {
+        z-index: 1000;
+    }
+    #heads-one .comsearch {
+        height: 60px;
+        line-height: 60px;
+    }
+    #heads-one .one-logo img {
+        height: 40px;
+    }
+    #heads-one .comsearch .fa {
+        color: #fff;
+        height: 30px;
+        line-height: 30px;
+        width: 30px;
+    }
+    #heads-one .comsearch .fa.fa-navicon {
+        top: 12px;
+    }
+    #heads-one .comsearch {
+        width: 85px;
+    }
+    #heads-one .cotophead .topsos {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    #ndeslide.heads-pat {
+        padding: 0;
+    }
+    #heads-pat.menushow {
+        left: 0;
+        margin-right: 0;
+    }
+    #heads-pat.onescroll .overbot {
+        position: fixed;
+        left: 0;
+        right: 0;
+        padding: 0;
+    }
+    #heads-pat.onescroll .overbot.pathide {
+        left: 250px;
+        right: -250px;
+    }
+    #heads-thre .inn {
+        height: 60px;
+    }
+    #heads-thre .topheader {
+        height: 60px;
+        position: relative;
+        min-width: 100px;
+        max-width: 250px;
+    }
+    #heads-thre .topheader .contcom {
+        margin: 0 15px;
+        display: block;
+    }
+    #heads-thre .topheader .contcom .infos {
+        display: block;
+        line-height: 30px;
+        border-bottom: 1px solid rgb(0, 80, 86);
+    }
+    #heads-thre .cotophead .fa-envelope {
+        margin: 0 5px 0 0;
+    }
+    #heads-thre .cotophead .topsos {
+        float: none;
+        font-size: 16px;
+        padding: 0 15px;
+    }
+	#ndeslide.heads-one .yesrespo {
+        padding: 60px 0 0;
+	}
+    .servbox {
+        width: 100%;
+        float: none;
+    }
+    .rotabox {
+        width: 100%;
+    }
+    .rightpar .bfcarousel {
+        text-align: center;
+    }
+    .item .psay img {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        float: none;
+    }
+    .tes-cont {
+        font: 300 16px Montserrat;
+        margin-left: 0;
+    }
+    .leftpar h1:after {
+        left: 50%;
+        margin-left: -35px;
+    }
+    .bfcallus h1 {
+        font: 30px/35px 'Montserrat';
+    }
+    .slider-n4 {
+        right: 20px;
+    }
+    .foot-bar {
+        width: 100%;
+        float: none;
+    }
+    .comtent.full .com-archive .teamwork {
+        width: 100%;
+        float: none;
+    }
+    .the-compost iframe {
+        height: 260px;
+    }
+    .kright,
+    .kleft {
+        width: 100%;
+        float: none;
+    }
+    .konleft {
+        width: 70px;
+    }
+    .singlemore {
+        width: 100%;
+        float: none;
+    }
+    .comform-textarea {
+        width: 100%;
+        float: none;
+    }
+    .comarea {
+        margin: 0 0 20px 0;
+    }
+    .comauthor,
+    .comemail,
+    .comurl {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #heads-pat .patlo .fa-chevron-down {
+        top: 20px;
+    }
+    #heads-one .cotophead .topsos .fa {
+        float: none;
+    }
+	.slider-n2 .heading {
+    font: 700 30px/1.0 Montserrat, 'PT Sans', san-serif;
+    }
+	.slider-n2 .n2outer { 
+    margin-right: 40px;
+    }
+    .homeprice {
+        width: 100%;
+    }
+    .homeprice.pop {
+        margin-top: 40px;
+    }
+    #ndeslide.heads-thre {
+        padding: 0;
+    }
+	#ndeslide.heads-thre .yesrespo {
+	margin-top: 60px;
+	}
+    .com-meta h1 {
+        font: 700 24px/1.2 Montserrat;
+    }
+    .com-archive h2 {
+        font: bold 24px/1.2 Montserrat;
+    }
+    .com-meta h1 {
+        font: 700 24px/1.2 Montserrat;
+    }
+    .more .more-meta h1 {
+        font: 700 20px/1.2 Montserrat;
+    }
+    .com-archive .psay {
+        text-align: center
+    }
+    .dateagen {
+        padding: 0;
+    }
+    .agendas .meta-share {
+        position: relative;
+        padding-top: 20px;
+    }
+    #clockdiv {
+        padding: 10px;
+    }
+    #clockdiv .ring {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        line-height: 35px;
+        border: 2px solid #fc0;
+    }
+    #clockdiv .ring.sec {
+        border: 2px solid #3bf;
+    }
+    #clockdiv span {
+        font-size: 20px;
+    }
+    .single-testimoni .item {
+        text-align: center;
+    }
+    .single-testimoni .item .psay img {
+        margin: 0 auto;
+        float: none;
+        display: block;
+    }
+    .single-testimoni .tes-cont {
+        margin: 0;
+    }
+    .vibar {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .com-head,
+    .inn-parallax h1,
+    .comworks h1,
+    .leftpar h1,
+    .compack-head {
+        text-align: center;
+        font: 700 22px 'Montserrat' !important;
+    }
+    .halfinn {
+        margin: 15px 0 30px;
+    }
+    .lefticon {
+        float: none;
+        margin: 0 auto;
+    }
+    .servhalf h1 {
+        text-align: center;
+        position: relative;
+        z-index: 100;
+        margin: 15px;
+        font: bold 18px 'Montserrat';
+    }
+    .servhalf h1:after {
+        left: 50%;
+        margin: 0 0 0 -35px;
+    }
+    .servtext {
+        text-align: center;
+    }
+    .con-parallax {
+        text-align: center;
+    }
+    .comworks .workdesc {
+        width: 100%;
+    }
+    .workpart {
+        width: 100%;
+        float: none;
+    }
+    #heads-pat .patlo .fa-chevron-down {
+        top: 10px;
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .slider-n3 {
+        left: 10px;
+        right: 10px;
+    }
+    .slider-n3 .heading {
+        font: 700 30px/1.0 Montserrat, 'PT Sans', san-serif;
+    }
+    .halfright {
+        margin-left: 0;
+    }
+    .beloop {
+        padding: 0 5px;
+    }
+    .sidebar {
+        padding: 0 5px;
+    }
+    .foot-inn,
+    .foot-inn.last {
+        margin: 0 5px;
+    }
+    .the-compost iframe {
+        height: 180px;
+    }
+    .meta-share {
+        position: relative;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .hisyear {
+        width: 100%;
+        float: none;
+        position: relative;
+    }
+    .comhisto {
+        width: 100%;
+        float: none;
+        position: relative;
+    }
+    .innhisto {
+        border-left: 0;
+        padding: 0 0 30px 0;
+    }
+    .circle {
+        display: none;
+    }
+    .histo:before,
+    .histo:after {
+        display: none;
+    }
+    .tahun {
+        position: relative;
+        top: 0;
+        right: 0;
+        border-radius: 4px 4px 0 0;
+    }
+    .histo {
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+
+@media screen and (max-width:360px) {
+#heads-thre .topheader {
+    max-width: 170px;
+}
+#heads-thre .topheader .contcom,
+#heads-thre .cotophead .topsos {
+    margin: 0 8px;
+}
+}

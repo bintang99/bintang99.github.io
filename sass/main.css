@@ -1,0 +1,18 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main p {
+  font-size: 30em;
+}
+
+body {
+  position: relative;
+}
+
+body .section {
+  position: absolute;
+}
+/*# sourceMappingURL=main.css.map */
