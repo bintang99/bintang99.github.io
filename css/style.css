@@ -391,6 +391,30 @@ p{
     box-shadow: 0 3px 10px rgba(0,0,0,.5);
 }
 
+.paralax{
+    position: relative;
+    background-color: rgba(7, 53, 180, 0.973);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 50vh;
+}
+
+.paralax::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+.paralax-berita{
+    background-image: url(../img/bg1.jpeg);
+}
+
 .header-body {
     color: aliceblue;
     margin-left: 100px;
